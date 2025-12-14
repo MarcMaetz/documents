@@ -5,32 +5,60 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \pagestyle{empty}
+\usepackage[default]{lato}
+
 
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=1pt}
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
+\definecolor{boxyellow}{HTML}{FFF176}
 
-% Small command for boxed section titles
+% Title box: yellow border, no fill, black text, full column width
 \newcommand{\boxedtitle}[1]{%
   \tikz[baseline=(t.base)]{
-    \node[fill=accent!40, text=white,
-          inner xsep=6pt, inner ysep=3pt,
-          rounded corners=2pt] (t) {\bfseries #1};
+    \node[
+      draw=boxyellow,
+      fill=white,   % was: fill=none
+      text=black,
+      line width=2pt,
+      inner xsep=6pt,
+      inner ysep=4pt,
+      rounded corners=2pt,
+      text width=\linewidth,
+      align=left
+    ] (t) {\bfseries #1};
+  }%
+}
+
+% Content box: black border, no fill, gray text, auto height
+\newcommand{\boxedcontent}[1]{%
+  \tikz[baseline=(c.base)]{
+    \node[
+      draw=black,
+      fill=white,   % was: fill=none
+      text=textgray,
+      line width=1pt,
+      inner xsep=6pt,
+      inner ysep=6pt,
+      rounded corners=2pt,
+      text width=\linewidth,
+      align=left
+    ] (c) {#1};
   }%
 }
 
 \begin{document}
 
-% --- Left sidebar background with TikZ (only decoration) ---
+% --- Right sidebar background with TikZ (only decoration) ---
 \begin{tikzpicture}[remember picture,overlay]
   \fill[accent!5]
-    (current page.north west)
-    rectangle ++(0.37\paperwidth,-\paperheight);
+    (current page.north east)
+    rectangle ++(-0.37\paperwidth,-\paperheight);
 \end{tikzpicture}
 
-% --- Header (normal LaTeX, uses sidebar visually) ---
+% --- Header (normal LaTeX) ---
 {\LARGE\bfseries Marc Maetz}\\[2pt]
 {\large Software Engineer}
 
@@ -38,86 +66,101 @@
 
 % --- Two-column layout with minipages ---
 \noindent
-\begin{minipage}[t]{0.34\textwidth}
-  \raggedright
-  \boxedtitle{Skills}\\[6pt]
-  NodeJS, TypeScript, Express\\
-  C, C\texttt{++}, Java, Python, R\\
-  Google Cloud Platform (GCP)\\
-  Microservices, APIs, Databases\\
-  Performance optimisation\\
-  Complex algorithms\\
-  Linux\\
-  High-performance computing
-
-  \vspace{0.9cm}
-
-  \boxedtitle{Contact}\\[6pt]
-  marc.maetz@proton.me\\
-  +41 77 434 15 25\\
-  Zurich, Switzerland\\
-  Swiss and French citizen\\
-  \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
-
-  \vspace{0.9cm}
-
-  \boxedtitle{Languages}\\[6pt]
-  German (native)\\
-  French (native)\\
-  English (fluent)
-
-  \vspace{0.9cm}
-
-  \boxedtitle{Beyond work}\\[6pt]
-  Amateur theatre\\
-  Running, cycling\\
-  Gym\\
-  Climbing, mountaineering
-\end{minipage}%
-\hfill
 \begin{minipage}[t]{0.6\textwidth}
   \raggedright
-  \boxedtitle{Experience}\\[8pt]
 
-  \textbf{Backend Software Engineer (TypeScript, Python)}\\
-  Yokoy \textbar\ Finance \hfill 2022--now, Zurich (CH)\\[-1pt]
-  \begin{itemize}
-    \item Scaled a microservice backend for a smart card payment platform by an order of magnitude.
-    \item Developed internal tooling to speed up incident investigation and resolution.
-    \item Worked in a fast-paced agile team with cross-functional collaboration.
-    \item Took ownership of complex problems from initial framing to solution.
-  \end{itemize}
+  \boxedtitle{Experience}\\[2pt]
+  \boxedcontent{%
+    \textbf{Backend Software Engineer (TypeScript, Python)}\\
+    Yokoy \textbar\ Finance \hfill 2022--now, Zurich (CH)\\[-1pt]
+    \begin{itemize}
+      \item Scaled a microservice backend for a smart card payment platform by an order of magnitude.
+      \item Developed internal tooling to speed up incident investigation and resolution.
+      \item Worked in a fast-paced agile team with cross-functional collaboration.
+      \item Took ownership of complex problems from initial framing to solution.
+    \end{itemize}
 
-  \vspace{4pt}
-  \textbf{Software Engineer (C)}\\
-  AutoForm \textbar\ Mechanical engineering \hfill 2018--2022, Zurich (CH)\\[-1pt]
-  \begin{itemize}
-    \item Implemented performance-critical algorithms for sheet metal forming simulations.
-    \item Focused on numerical robustness and computational efficiency.
-  \end{itemize}
+    \vspace{4pt}
+    \textbf{Software Engineer (C)}\\
+    AutoForm \textbar\ Mechanical engineering \hfill 2018--2022, Zurich (CH)\\[-1pt]
+    \begin{itemize}
+      \item Implemented performance-critical algorithms for sheet metal forming simulations.
+      \item Focused on numerical robustness and computational efficiency.
+    \end{itemize}
 
-  \vspace{4pt}
-  \textbf{Software Developer (Java)}\\
-  Unitek Engineering \textbar\ Finance \hfill 2017--2018, Zurich (CH)\\[-1pt]
-  \begin{itemize}
-    \item Built adapters to integrate and expose external fund information.
-  \end{itemize}
+    \vspace{4pt}
+    \textbf{Software Developer (Java)}\\
+    Unitek Engineering \textbar\ Finance \hfill 2017--2018, Zurich (CH)\\[-1pt]
+    \begin{itemize}
+      \item Built adapters to integrate and expose external fund information.
+    \end{itemize}
 
-  \vspace{4pt}
-  \textbf{R\&D Intern (MATLAB)}\\
-  KIER \textbar\ Mechanical engineering \hfill 2014, Daejeon (KR)\\[-1pt]
-  \begin{itemize}
-    \item Contributed to simulation and analysis for solar concentrator research.
-  \end{itemize}
+    \vspace{4pt}
+    \textbf{R\&D Intern (MATLAB)}\\
+    KIER \textbar\ Mechanical engineering \hfill 2014, Daejeon (KR)\\[-1pt]
+    \begin{itemize}
+      \item Contributed to simulation and analysis for solar concentrator research.
+    \end{itemize}
+  }
 
-  \vspace{0.6cm}
-  \boxedtitle{Education}\\[8pt]
+  \vspace{0.7cm}
 
-  ETH Zurich \hfill completed 2017, Zurich\\
-  Master of Science in Computational Science and Engineering\\[3pt]
-  Exchange semester at KTH Royal Institute of Technology, Stockholm\\[6pt]
-  ETH Zurich, Zurich\\
-  Bachelor of Science in Physics
+  \boxedtitle{Education}\\[2pt]
+  \boxedcontent{%
+    ETH Zurich \hfill completed 2017, Zurich\\
+    Master of Science in Computational Science and Engineering\\[3pt]
+    Exchange semester at KTH Royal Institute of Technology, Stockholm\\[6pt]
+    ETH Zurich, Zurich\\
+    Bachelor of Science in Physics
+  }
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+  \raggedright
+
+  \boxedtitle{Skills}\\[2pt]
+  \boxedcontent{%
+    NodeJS, TypeScript, Express\\
+    C, C\texttt{++}, Java, Python, R\\
+    Google Cloud Platform (GCP)\\
+    Microservices, APIs, Databases\\
+    Performance optimisation\\
+    Complex algorithms\\
+    Linux\\
+    High-performance computing
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Contact}\\[2pt]
+  \boxedcontent{%
+    marc.maetz@proton.me\\
+    +41 77 434 15 25\\
+    Zurich, Switzerland\\
+    Swiss and French citizen\\
+    \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Languages}\\[2pt]
+  \boxedcontent{%
+    German (native)\\
+    French (native)\\
+    English (fluent)
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Beyond work}\\[2pt]
+  \boxedcontent{%
+    Amateur theatre\\
+    Running, cycling\\
+    Gym\\
+    Climbing, mountaineering
+  }
+
 \end{minipage}
 
 \end{document}
