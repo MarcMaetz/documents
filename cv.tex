@@ -12,6 +12,15 @@
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
 
+% Small command for boxed section titles
+\newcommand{\boxedtitle}[1]{%
+  \tikz[baseline=(t.base)]{
+    \node[fill=accent!40, text=white,
+          inner xsep=6pt, inner ysep=3pt,
+          rounded corners=2pt] (t) {\bfseries #1};
+  }%
+}
+
 \begin{document}
 
 % --- Left sidebar background with TikZ (only decoration) ---
@@ -27,11 +36,11 @@
 
 \vspace{0.8cm}
 
-% --- Two-column layout with minipages (normal flow) ---
+% --- Two-column layout with minipages ---
 \noindent
 \begin{minipage}[t]{0.34\textwidth}
   \raggedright
-  {\bfseries Skills}\\[4pt]
+  \boxedtitle{Skills}\\[6pt]
   NodeJS, TypeScript, Express\\
   C, C\texttt{++}, Java, Python, R\\
   Google Cloud Platform (GCP)\\
@@ -41,25 +50,25 @@
   Linux\\
   High-performance computing
 
-  \vspace{1cm}
+  \vspace{0.9cm}
 
-  {\bfseries Contact}\\[4pt]
+  \boxedtitle{Contact}\\[6pt]
   marc.maetz@proton.me\\
   +41 77 434 15 25\\
   Zurich, Switzerland\\
   Swiss and French citizen\\
   \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
 
-  \vspace{1cm}
+  \vspace{0.9cm}
 
-  {\bfseries Languages}\\[4pt]
+  \boxedtitle{Languages}\\[6pt]
   German (native)\\
   French (native)\\
   English (fluent)
 
-  \vspace{1cm}
+  \vspace{0.9cm}
 
-  {\bfseries Beyond work}\\[4pt]
+  \boxedtitle{Beyond work}\\[6pt]
   Amateur theatre\\
   Running, cycling\\
   Gym\\
@@ -68,7 +77,7 @@
 \hfill
 \begin{minipage}[t]{0.6\textwidth}
   \raggedright
-  {\bfseries Experience}\\[6pt]
+  \boxedtitle{Experience}\\[8pt]
 
   \textbf{Backend Software Engineer (TypeScript, Python)}\\
   Yokoy \textbar\ Finance \hfill 2022--now, Zurich (CH)\\[-1pt]
@@ -102,7 +111,7 @@
   \end{itemize}
 
   \vspace{0.6cm}
-  {\bfseries Education}\\[6pt]
+  \boxedtitle{Education}\\[8pt]
 
   ETH Zurich \hfill completed 2017, Zurich\\
   Master of Science in Computational Science and Engineering\\[3pt]
@@ -112,3 +121,4 @@
 \end{minipage}
 
 \end{document}
+
