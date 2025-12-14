@@ -55,7 +55,7 @@
 \begin{tikzpicture}[remember picture,overlay]
   \fill[accent!5]
     (current page.north east)
-    rectangle ++(-0.37\paperwidth,-\paperheight);
+    rectangle ++(-0.385\paperwidth,-\paperheight);
 \end{tikzpicture}
 
 % --- Header (normal LaTeX) ---
@@ -66,7 +66,7 @@
 
 % --- Two-column layout with minipages ---
 \noindent
-\begin{minipage}[t]{0.65\textwidth}
+\begin{minipage}[t]{0.60\textwidth}
   \raggedright
 
   \boxedtitle{Skills}\\[2pt]
@@ -117,20 +117,9 @@
     \end{itemize}
   }
 
-  \vspace{0.7cm}
-
-  \boxedtitle{Education}\\[2pt]
-  \boxedcontent{%
-    ETH Zurich \hfill completed 2017, Zurich\\
-    Master of Science in Computational Science and Engineering\\[3pt]
-    Exchange semester at KTH Royal Institute of Technology, Stockholm\\[6pt]
-    ETH Zurich, Zurich\\
-    Bachelor of Science in Physics
-  }
-
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.25\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
   \raggedright
 
   \boxedtitle{Contact}\\[2pt]
@@ -149,6 +138,26 @@
     German (native)\\
     French (native)\\
     English (fluent)
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Education}\\[2pt]
+  \boxedcontent{%
+    ETH Zurich, Master of Science\\
+    Computational Science and \\Engineering
+  } \\ \vspace{0.1cm}
+
+    \boxedcontent{%
+    ETH Zurich, 
+    Bachelor of Science\\
+    Physics
+  }
+  \\
+  \vspace{0.1cm}
+    \boxedcontent{%
+    KTH Royal Institute of Technology, Stockholm\\
+    Exchange semester
   }
 
   \vspace{0.7cm}
