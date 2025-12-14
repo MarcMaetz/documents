@@ -89,7 +89,10 @@
       minimum width=3cm,
       minimum height=3cm,
       path picture={
-        \node[anchor=center] at (path picture bounding box.center) {#1};
+        \clip[rounded corners=2pt] (path picture bounding box.south west) rectangle (path picture bounding box.north east);
+        \node[anchor=center,inner sep=0pt,outer sep=0pt] at (path picture bounding box.center) {
+          #1
+        };
       },
       box shadow
     ] (i) {};
@@ -116,7 +119,7 @@
 \begin{minipage}[t]{0.35\textwidth}
   \raggedleft
   \boxedimage{%
-    \includegraphics[width=3cm,height=3cm,keepaspectratio]{Marc.jpg}
+    \resizebox{4cm}{4cm}{\includegraphics{Marc.jpg}}
   }
 \end{minipage}
 
