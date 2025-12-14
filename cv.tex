@@ -2,6 +2,7 @@
 
 \usepackage[margin=1.8cm]{geometry}
 \usepackage{tikz}
+\usetikzlibrary{shadows}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \pagestyle{empty}
@@ -27,7 +28,8 @@
       inner ysep=4pt,
       rounded corners=2pt,
       text width=\linewidth,
-      align=left
+      align=left,
+      drop shadow={shadow xshift=2pt, shadow yshift=-2pt, fill=black!25}
     ] (t) {\bfseries #1};
   }%
 }
@@ -44,7 +46,8 @@
       inner ysep=6pt,
       rounded corners=2pt,
       text width=\linewidth,
-      align=left
+      align=left,
+      drop shadow={shadow xshift=2pt, shadow yshift=-2pt, fill=black!25}
     ] (c) {#1};
   }%
 }
