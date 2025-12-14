@@ -78,7 +78,7 @@
   }%
 }
 
-% Image box: white border, no padding, image gets cropped by rounded corners
+% Image box: white border, no padding, image gets cropped by rounded corners, square format
 \newcommand{\boxedimage}[1]{%
   \tikz[baseline=(i.base)]{
     \node[
@@ -88,7 +88,8 @@
       inner xsep=0pt,
       inner ysep=0pt,
       rounded corners=2pt,
-      text width=\linewidth,
+      minimum width=2cm,
+      minimum height=2cm,
       align=center,
       clip,
       drop shadow={shadow xshift=1pt, shadow yshift=0pt, fill=black!15},
@@ -196,8 +197,9 @@
 \begin{minipage}[t]{0.35\textwidth}
   \raggedright
 
+  \centering
   \boxedimage{%
-    \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{Marc.jpg}
+    \includegraphics[width=2cm,height=2cm,keepaspectratio]{Marc.jpg}
   }
 
   \vspace{0.7cm}
