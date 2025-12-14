@@ -78,18 +78,15 @@
   }%
 }
 
-% Image box: white border, no padding, image gets cropped by rounded corners, square format
+% Image box: no border, no padding, image gets cropped by rounded corners, square format
 \newcommand{\boxedimage}[1]{%
   \tikz[baseline=(i.base)]{
     \node[
       draw=white,
-      fill=white,
-      line width=1pt,
+      fill=none,
       inner xsep=0pt,
       inner ysep=0pt,
       rounded corners=2pt,
-      minimum width=2cm,
-      minimum height=2cm,
       align=center,
       clip,
       drop shadow={shadow xshift=1pt, shadow yshift=0pt, fill=black!15},
