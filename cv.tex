@@ -6,6 +6,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{amssymb}
+\usepackage{graphicx}
 \pagestyle{empty}
 \usepackage[default]{lato}
 
@@ -20,7 +21,7 @@
 % Star rating command
 \newcommand{\starrating}[1]{%
   \ifnum#1=3 $\bigstar$ $\bigstar$ $\bigstar$\fi
-  \ifnum#1=2 $\bigstar$ $\bigstar$ $\star$\fi
+  \ifnum#1=2 $\bigstar$ $\bigstar$ $\scalebox{1.2}{$\star$}$\fi
 }
 
 % Title box: yellow border, no fill, black text, full column width
@@ -168,6 +169,12 @@
 \begin{minipage}[t]{0.35\textwidth}
   \raggedright
 
+  \boxedcontent{%
+    \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{Marc.jpg}
+  }
+
+  \vspace{0.7cm}
+
   \boxedtitle{Contact}\\[2pt]
   \boxedcontent{%
     marc.maetz@proton.me\\
@@ -202,7 +209,7 @@
   \\
   \vspace{0.1cm}
     \boxedcontent{%
-    KTH Royal Institute of Technology, Stockholm\\
+    KTH Stockholm\\
     Exchange semester
   }
 
