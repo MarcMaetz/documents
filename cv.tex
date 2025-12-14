@@ -5,6 +5,7 @@
 \usetikzlibrary{shadows}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
+\usepackage{amssymb}
 \pagestyle{empty}
 \usepackage[default]{lato}
 
@@ -15,6 +16,12 @@
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
 \definecolor{boxyellow}{HTML}{FFF176}
+
+% Star rating command
+\newcommand{\starrating}[1]{%
+  \ifnum#1=3 $\bigstar$ $\bigstar$ $\bigstar$\fi
+  \ifnum#1=2 $\bigstar$ $\bigstar$ $\star$\fi
+}
 
 % Title box: yellow border, no fill, black text, full column width
 \newcommand{\boxedtitle}[1]{%
@@ -92,14 +99,21 @@
 
   \boxedtitle{Skills}\\[2pt]
   \boxedcontent{%
-    NodeJS, TypeScript, Express\\
-    C, C\texttt{++}, Java, Python, R\\
-    Google Cloud Platform (GCP)\\
-    Microservices, APIs, Databases\\
-    Performance optimisation\\
-    Complex algorithms\\
-    Linux\\
-    High-performance computing
+    \begin{minipage}[t]{0.48\textwidth}
+      \raggedright
+      NodeJS, TypeScript, Express \starrating{3}\\
+      C, C\texttt{++}, Java, Python, R \starrating{3}\\
+      Google Cloud Platform (GCP) \starrating{3}\\
+      Microservices, APIs, Databases \starrating{3}\\
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+      \raggedright
+      Performance optimisation \starrating{2}\\
+      Complex algorithms \starrating{2}\\
+      Linux \starrating{2}\\
+      High-performance computing \starrating{2}\\
+    \end{minipage}
   }
 
   \vspace{0.7cm}
