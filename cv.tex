@@ -78,6 +78,33 @@
   }%
 }
 
+% Image box: white border, no padding, image gets cropped by rounded corners
+\newcommand{\boxedimage}[1]{%
+  \tikz[baseline=(i.base)]{
+    \node[
+      draw=white,
+      fill=white,
+      line width=1pt,
+      inner xsep=0pt,
+      inner ysep=0pt,
+      rounded corners=2pt,
+      text width=\linewidth,
+      align=center,
+      clip,
+      drop shadow={shadow xshift=1pt, shadow yshift=0pt, fill=black!15},
+      drop shadow={shadow xshift=0.707pt, shadow yshift=0.707pt, fill=black!15},
+      drop shadow={shadow xshift=0pt, shadow yshift=1pt, fill=black!15},
+      drop shadow={shadow xshift=-0.707pt, shadow yshift=0.707pt, fill=black!15},
+      drop shadow={shadow xshift=-1pt, shadow yshift=0pt, fill=black!15},
+      drop shadow={shadow xshift=-0.707pt, shadow yshift=-0.707pt, fill=black!15},
+      drop shadow={shadow xshift=0pt, shadow yshift=-1pt, fill=black!15},
+      drop shadow={shadow xshift=0.707pt, shadow yshift=-0.707pt, fill=black!15},
+      drop shadow={shadow xshift=2pt, shadow yshift=-2pt, fill=black!10},
+      drop shadow={shadow xshift=3pt, shadow yshift=-3pt, fill=black!5}
+    ] (i) {#1};
+  }%
+}
+
 \begin{document}
 
 % --- Right sidebar background with TikZ (only decoration) ---
@@ -169,9 +196,8 @@
 \begin{minipage}[t]{0.35\textwidth}
   \raggedright
 
-  \boxedcontent{%
-    \centering
-    \includegraphics[width=0.9\linewidth,height=4cm,keepaspectratio]{Marc.jpg}
+  \boxedimage{%
+    \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{Marc.jpg}
   }
 
   \vspace{0.7cm}
