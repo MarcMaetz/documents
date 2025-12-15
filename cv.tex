@@ -18,6 +18,9 @@
 \definecolor{textgray}{gray}{0.25}
 \definecolor{boxyellow}{HTML}{FFF176}
 
+% Shared size for the profile image box
+\newcommand{\imageboxsize}{4.2cm}
+
 % Reusable drop shadow style
 \tikzset{
   box shadow/.style={
@@ -86,13 +89,11 @@
       inner ysep=0pt,
       rounded corners=2pt,
       align=center,
-      minimum width=3cm,
-      minimum height=3cm,
+      minimum width=\dimexpr\imageboxsize-2mm\relax,
+      minimum height=\dimexpr\imageboxsize-2mm\relax,
       path picture={
         \clip[rounded corners=2pt] (path picture bounding box.south west) rectangle (path picture bounding box.north east);
-        \node[anchor=center,inner sep=0pt,outer sep=0pt] at (path picture bounding box.center) {
-          #1
-        };
+        \node[anchor=center,inner sep=0pt,outer sep=0pt] at (path picture bounding box.center) {#1};
       },
       box shadow
     ] (i) {};
@@ -119,7 +120,7 @@
 \begin{minipage}[t]{0.35\textwidth}
   \centering
   \boxedimage{%
-    \resizebox{3.2cm}{3.2cm}{\includegraphics{Marc.jpg}}
+    \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
   }
 \end{minipage}
 
