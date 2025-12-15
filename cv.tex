@@ -24,6 +24,9 @@
 \newcommand{\colgap}{0.04\textwidth}
 \newcommand{\leftcolwidth}{0.68\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
+% Sidebar width and padding to make the column visible
+\newcommand{\sidebarpad}{0.5cm}
+\newcommand{\sidebarwidth}{\dimexpr\rightcolwidth+\sidebarpad\relax}
 
 % Reusable drop shadow style
 \tikzset{
@@ -108,9 +111,9 @@
 
 % --- Right sidebar background with TikZ (only decoration) ---
 \begin{tikzpicture}[remember picture,overlay]
-  \fill[accent!5]
+  \fill[accent!8]
     (current page.north east)
-    rectangle ++(-0.385\paperwidth,-\paperheight);
+    rectangle ++(-\sidebarwidth,-\paperheight);
 \end{tikzpicture}
 
 % --- Header (normal LaTeX) ---
