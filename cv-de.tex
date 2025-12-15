@@ -1,0 +1,157 @@
+\documentclass[a4paper,11pt]{article}
+\input{cv-style}
+
+\begin{document}
+
+% --- Right sidebar background with TikZ (only decoration) ---
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[accent!8]
+    (current page.north east)
+    rectangle ++(-\sidebarwidth,-\paperheight);
+\end{tikzpicture}
+
+% --- Header (normal LaTeX) ---
+\noindent
+\begin{minipage}[t]{\leftcolwidth}
+  \centering
+  {\huge\bfseries Marc Maetz}\\[4pt]
+  {\Large Software-Ingenieur}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{\rightcolwidth}
+  \centering
+  \boxedimage{%
+    \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+  }
+\end{minipage}
+
+\vspace{0.8cm}
+
+% --- Two-column layout with minipages ---
+\noindent
+\begin{minipage}[t]{\leftcolwidth}
+  \raggedright
+
+  \boxedtitle{Kenntnisse}\\[2pt]
+  \boxedcontent{%
+    \begin{minipage}[t]{0.48\textwidth}
+      \raggedright
+      NodeJS, TypeScript, Express\\
+      C, C\texttt{++}, Java, Python, R\\
+      Google Cloud Platform (GCP)\\
+      Microservices, APIs, Datenbanken\\
+      Banking-API
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+      \raggedright
+      Performance-Optimierung\\
+      Komplexe Algorithmen\\
+      Linux, git\\
+      Hochleistungsrechnen\\
+    \end{minipage}
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Berufserfahrung}\\[2pt]
+  \boxedcontent{%
+    \textbf{Software-Ingenieur (TypeScript, Python)} -- Yokoy -- Finanzen\\[2pt]
+    {\small\textcolor{textgray}{\textit{2022-05 / aktuell, Zürich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Skalierung eines Microservice-Backends für eine Smart-Card-Zahlungsplattform um eine Größenordnung
+      \item Entwicklung interner Tools zur Beschleunigung der Incident-Untersuchung und -Lösung
+      \item Arbeit in einem schnellen, agilen, funktionsübergreifenden Team
+      \item Verantwortung von der Problemstellung bis zur Lösungslieferung
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{Software-Ingenieur (C)} -- AutoForm -- Maschinenbau\\[2pt]
+    {\small\textcolor{textgray}{\textit{2018-05 / 2022-05, Zürich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Entwicklung leistungskritischer Algorithmen für Blechumformsimulationen
+      \item Fokus auf numerische Robustheit und Recheneffizienz
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{Software-Entwickler (Java)} -- Unitek Engineering -- Finanzen\\[2pt]
+    {\small\textcolor{textgray}{\textit{2017-09 / 2018-03, Zürich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Entwicklung von Adaptern zur Integration und Bereitstellung externer Fondsinformationen
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{F\&E Praktikant (MATLAB)} -- KIER -- Maschinenbau\\[2pt]
+    {\small\textcolor{textgray}{\textit{2014-09 / 2014-10, Daejeon (KR)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Beitrag zu Simulation und Analyse für Solarkonzentrator-Forschung
+    \end{itemize}
+  }
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{\rightcolwidth}
+  \raggedright
+
+  \boxedtitle{Kontakt}\\[2pt]
+  \boxedcontent{%
+    \href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}\\
+    +41 77 434 15 25\\
+    Zürich, Schweiz\\
+    Schweizer und französischer Staatsbürger\\
+    \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Sprachen}\\[2pt]
+  \boxedcontent{%
+    Deutsch (Muttersprache)\\
+    Französisch (Muttersprache)\\
+    Englisch (C1)
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Ausbildung}\\[2pt]
+  \boxedcontent{%
+    \textbf{ETH Zürich}\\
+    \textbf{Master of Science}\\
+    Computational Science and \\Engineering
+  } \\ \vspace{0.1cm}
+
+    \boxedcontent{%
+    \textbf{ETH Zürich}\\
+    \textbf{Bachelor of Science}\\
+    Physik
+  }
+  \\
+  \vspace{0.1cm}
+    \boxedcontent{%
+    \textbf{KTH Stockholm}\\
+    Austauschsemester
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Neben der Arbeit}\\[2pt]
+  \boxedcontent{%
+    Amateurtheater\\
+    Laufen, Radfahren\\
+    Fitnessstudio\\
+    Klettern, Bergsteigen
+  }
+
+\end{minipage}
+
+\end{document}
+
