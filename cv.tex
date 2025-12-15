@@ -24,11 +24,17 @@
 % Shared size for the profile image box
 \newcommand{\imageboxsize}{4.2cm}
 
+% Column widths: define in terms of textwidth (for minipages)
 \newcommand{\colgap}{0.04\textwidth}
 \newcommand{\leftcolwidth}{0.68\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
-% Sidebar width: right column plus one page margin (overlay is in page coords)
-\newcommand{\sidebarwidth}{\dimexpr\rightcolwidth+\pagemargin\relax}
+% Sidebar width: convert textwidth-based right column to paperwidth coords for overlay
+% The sidebar starts from page right edge and should cover: right column + half gap + margin
+\newlength{\rightcolwidthabs}
+\newlength{\colgapabs}
+\setlength{\rightcolwidthabs}{\rightcolwidth}
+\setlength{\colgapabs}{\colgap}
+\newcommand{\sidebarwidth}{\dimexpr\rightcolwidthabs+\colgapabs/2+\pagemargin\relax}
 
 % Reusable drop shadow style
 \tikzset{
