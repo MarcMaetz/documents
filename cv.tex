@@ -28,9 +28,8 @@
 \newcommand{\leftcolwidth}{0.68\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
 % Sidebar width and padding to make the column visible
-\newcommand{\sidebarpad}{0.5cm}
-% Include page margin so the sidebar spans the visible right column plus padding
-\newcommand{\sidebarwidth}{\dimexpr\rightcolwidth+\sidebarpad+\pagemargin\relax}
+% Sidebar spans the right column with a small padding
+\newcommand{\sidebarwidth}{\dimexpr\rightcolwidth+\pagemargin\relax}
 
 % Reusable drop shadow style
 \tikzset{
