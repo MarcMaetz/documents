@@ -21,6 +21,10 @@
 % Shared size for the profile image box
 \newcommand{\imageboxsize}{4.2cm}
 
+% Column widths (set left; right derives from it)
+\newcommand{\leftcolwidth}{0.75\textwidth}
+\newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth\relax}
+
 % Reusable drop shadow style
 \tikzset{
   box shadow/.style={
@@ -111,13 +115,13 @@
 
 % --- Header (normal LaTeX) ---
 \noindent
-\begin{minipage}[t]{0.60\textwidth}
+\begin{minipage}[t]{\leftcolwidth}
   \centering
   {\LARGE\bfseries Marc Maetz}\\[2pt]
   {\large Software Engineer}
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{\rightcolwidth}
   \centering
   \boxedimage{%
     \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
@@ -128,7 +132,7 @@
 
 % --- Two-column layout with minipages ---
 \noindent
-\begin{minipage}[t]{0.60\textwidth}
+\begin{minipage}[t]{\leftcolwidth}
   \raggedright
 
   \boxedtitle{Skills}\\[2pt]
@@ -199,7 +203,7 @@
 
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{\rightcolwidth}
   \raggedright
 
   \boxedtitle{Contact}\\[2pt]
