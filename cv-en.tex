@@ -13,15 +13,29 @@
 % --- Header (normal LaTeX) ---
 \noindent
 \begin{minipage}[t]{\leftcolwidth}
-  \centering
-  {\LARGE\bfseries Marc Maetz}\\[2pt]
-  {\Large Software Engineer}
+  \begin{minipage}[t]{\dimexpr0.55\leftcolwidth\relax}
+    \raggedright
+    {\LARGE\bfseries Marc Maetz}\\[2pt]
+    {\Large Software Engineer}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{\dimexpr0.42\leftcolwidth\relax}
+    \centering
+    \boxedimage{%
+      \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+    }
+  \end{minipage}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{\rightcolwidth}
-  \centering
-  \boxedimage{%
-    \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+  \raggedright
+  \boxedtitle{Contact}\\[2pt]
+  \boxedcontent{%
+    \href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}\\
+    +41 77 434 15 25\\
+    Zurich, Switzerland\\
+    Swiss and French citizen\\
+    \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
   }
 \end{minipage}
 
@@ -31,29 +45,6 @@
 \noindent
 \begin{minipage}[t]{\leftcolwidth}
   \raggedright
-
-  \boxedtitle{Skills}\\[2pt]
-  \boxedcontent{%
-    \begin{minipage}[t]{0.48\textwidth}
-      \raggedright
-      TypeScript, NodeJS, Express,\\
-      Python, C, C\texttt{++},\\ Java Spring Boot, R,\\
-      Google Cloud Platform (GCP),\\
-      Microservices, Payment Systems,\\
-      3rd Party APIs, Databases, Redis
-    \end{minipage}%
-    \hfill
-    \begin{minipage}[t]{0.48\textwidth}
-      \raggedright
-      Performance optimisation,\\
-      Low-level systems programming,\\
-      Complex algorithms, Testing,\\
-      Linux, git,\\
-      Banking-API, Cards-API
-    \end{minipage}
-  }
-
-  \vspace{0.7cm}
 
   \boxedtitle{Experience}\\[2pt]
   \boxedcontent{%
@@ -105,13 +96,17 @@
 \begin{minipage}[t]{\rightcolwidth}
   \raggedright
 
-  \boxedtitle{Contact}\\[2pt]
+  \boxedtitle{Skills}\\[2pt]
   \boxedcontent{%
-    \href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}\\
-    +41 77 434 15 25\\
-    Zurich, Switzerland\\
-    Swiss and French citizen\\
-    \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
+    TypeScript, NodeJS, Express,\\
+    Python, C, C\texttt{++}, Java Spring Boot,\\
+    Google Cloud Platform (GCP),\\
+    Microservices, Payment Systems,\\
+    3rd Party APIs, Databases, Redis,\\
+    Performance optimisation,\\
+    Low-level systems programming,\\
+    Complex algorithms, Testing,\\
+    Linux, git
   }
 
   \vspace{0.7cm}

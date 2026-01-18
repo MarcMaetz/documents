@@ -27,7 +27,8 @@
 
 % Column widths: define in terms of textwidth (for minipages)
 \newcommand{\colgap}{0.04\textwidth}
-\newcommand{\leftcolwidth}{0.68\textwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.60\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
 % Sidebar width: convert textwidth-based right column to paperwidth coords for overlay
 % The sidebar starts from page right edge and should cover: right column + half gap + margin
