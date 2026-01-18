@@ -13,76 +13,71 @@
 % --- Header (normal LaTeX) ---
 \noindent
 \begin{minipage}[t]{\leftcolwidth}
-  \centering
-  {\LARGE\bfseries Marc Maetz}\\[2pt]
-  {\Large Software-Ingenieur}
+  \begin{minipage}[t][\imageboxsize][c]{\dimexpr0.55\leftcolwidth\relax}
+    \raggedright
+    {\LARGE\bfseries Marc Maetz}\\[2pt]
+    {\Large Software-Ingenieur}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{\dimexpr0.42\leftcolwidth\relax}
+    \vspace{0pt}
+    \centering
+    \boxedimage{%
+      \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+    }
+  \end{minipage}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{\rightcolwidth}
-  \centering
-  \boxedimage{%
-    \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+  \vspace{0pt}
+  \raggedright
+  \boxedtitle{Kontakt}\\[2pt]
+  \boxedcontent{%
+    \faEnvelope\ \href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}\\
+    \faPhone\ +41 77 434 15 25\\
+    \faMapMarker\ Zürich, Schweiz\\
+    \faPassport\ Schweizer und französischer Staatsbürger\\
+    \faLinkedin\ \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
   }
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.3cm}
 
 % --- Two-column layout with minipages ---
 \noindent
 \begin{minipage}[t]{\leftcolwidth}
   \raggedright
 
-  \boxedtitle{Kenntnisse}\\[2pt]
-  \boxedcontent{%
-    \begin{minipage}[t]{0.48\textwidth}
-      \raggedright
-      TypeScript, NodeJS, Express,\\
-      Python, C, C\texttt{++},\\ Java Spring Boot, R,\\
-      Google Cloud Platform (GCP),\\
-      Microservices, APIs, Datenbanken
-    \end{minipage}%
-    \hfill
-    \begin{minipage}[t]{0.48\textwidth}
-      \raggedright
-      Performance-Optimierung,\\
-      Komplexe Algorithmen,\\
-      Linux, git,\\
-      High-performance computing,\\
-      Banking-API, Cards-API
-    \end{minipage}
-  }
-
-  \vspace{0.7cm}
-
   \boxedtitle{Berufserfahrung}\\[2pt]
   \boxedcontent{%
-    \textbf{Software-Ingenieur (TypeScript, Python)} -- Yokoy -- Finanzen\\[2pt]
+    \textbf{Software-Ingenieur (TypeScript, Python, GCP)} -- \href{https://www.perk.com}{Yokoy/Perk} -- Finanzen\\[2pt]
     {\small\textcolor{textgray}{\textit{2022-05/aktuell, Zürich (CH)}}}\\[2pt]
     \begin{itemize}[leftmargin=*, itemsep=2pt]
-      \item Skalierung eines Microservice-Backends für eine Smart-Card-Zahlungsplattform um 100x
-      \item Stellvertretende Leitung von 2 Ingenieuren während der Abwesenheit des leitenden Ingenieur
-      \item Einführung der Firebase API in Support-Tools für schnellere Vorfalldisposition und 60\% Code-Reduktion für 3 Ingenieure
-      \item Audit von 1.000 Ledgern zur Erkennung von Sequenzinkonsistenzen, Erstellung einer vollständigen Ticket-Basis zur Bearbeitung aller identifizierten Probleme
-      \item Ausgeprägtes Verantwortungsbewusstsein und Affinität zur funktionsübergreifenden Kommunikation
+      \item Skalierung von Zahlungsverarbeitungs-Microservices um 100x, Optimierung von Datenbankabfragen und Implementierung von Caching-Strategien zur Bewältigung erhöhter Transaktionsvolumen
+      \item Design und Implementierung von Integrationen mit Bank- und Kartenzahlungs-APIs, Gewährleistung sicherer Transaktionsabläufe und Fehlerbehandlung für Finanzoperationen
+      \item Stellvertretende Leitung von 2 Ingenieuren, Mentoring im Bereich Zahlungssystem-Architektur und Best Practices; Häufige funktionsübergreifende Zusammenarbeit mit Produkt- und Infrastruktur-Teams
+      \item Aufbau automatisierter Test-Infrastruktur und Monitoring für Zahlungssysteme, Reduzierung der Incident-Auflösungszeit und Verbesserung der Systemzuverlässigkeit
+      \item Einführung der Firebase API-Integration in Support-Tools, 60\% Code-Reduktion für 3 Ingenieure und schnellere Incident-Auflösung
+      \item Audit von 1.000 Zahlungs-Ledgern zur Erkennung von Sequenzinkonsistenzen, Erstellung eines umfassenden Ticket-Backlogs zur Bearbeitung aller identifizierten Probleme und Verhinderung finanzieller Diskrepanzen
     \end{itemize}
   }
 
   \vspace{0.3cm}
 
   \boxedcontent{%
-    \textbf{Software-Ingenieur (C)} -- AutoForm -- Maschinenbau\\[2pt]
-    {\small\textcolor{textgray}{\textit{2018-05 / 2022-05, Zürich (CH)}}}\\[2pt]
+    \textbf{Software-Ingenieur (C)} -- \href{https://www.autoform.com}{AutoForm} -- Maschinenbau\\[3pt]
+    {\small\textcolor{textgray}{\textit{2018-05/2022-05, Zürich (CH)}}}\\[2pt]
     \begin{itemize}[leftmargin=*, itemsep=2pt]
-      \item Entwicklung leistungskritischer Algorithmen für Blechumformsimulationen
-      \item Fokus auf numerische Robustheit und Recheneffizienz
+      \item Entwicklung leistungskritischer Algorithmen in C für Blechumformsimulationen, Optimierung von Speicherverwaltung und Recheneffizienz
+      \item Anwendung von Low-Level-Systemprogrammierungsprinzipien zur Erreichung numerischer Robustheit und High-Performance-Computing-Anforderungen
     \end{itemize}
   }
 
   \vspace{0.3cm}
 
   \boxedcontent{%
-    \textbf{Software-Entwickler (Java)} -- Unitek Engineering -- Finanzen\\[2pt]
-    {\small\textcolor{textgray}{\textit{2017-09 / 2018-03, Zürich (CH)}}}\\[2pt]
+    \textbf{Software-Entwickler (Java)} -- \href{https://www.unitek.ch}{Unitek Engineering} -- Finanzen\\[2pt]
+    {\small\textcolor{textgray}{\textit{2017-09/2018-03, Zürich (CH)}}}\\[2pt]
     \begin{itemize}[leftmargin=*, itemsep=2pt]
       \item Entwicklung von Adaptern zur Integration und Bereitstellung externer Fondsinformationen
     \end{itemize}
@@ -91,8 +86,8 @@
   \vspace{0.3cm}
 
   \boxedcontent{%
-    \textbf{F\&E Praktikant (MATLAB)} -- KIER -- Maschinenbau\\[2pt]
-    {\small\textcolor{textgray}{\textit{2014-09 / 2014-10, Daejeon (KR)}}}\\[2pt]
+    \textbf{F\&E Praktikant (MATLAB)} -- \href{https://www.kier.re.kr}{KIER} -- Maschinenbau\\[2pt]
+    {\small\textcolor{textgray}{\textit{2014-09/2014-10, Daejeon (KR)}}}\\[2pt]
     \begin{itemize}[leftmargin=*, itemsep=2pt]
       \item Beitrag zu Simulation und Analyse für Solarkonzentrator-Forschung
     \end{itemize}
@@ -103,13 +98,14 @@
 \begin{minipage}[t]{\rightcolwidth}
   \raggedright
 
-  \boxedtitle{Kontakt}\\[2pt]
+  \boxedtitle{Kenntnisse}\\[2pt]
   \boxedcontent{%
-    \href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}\\
-    +41 77 434 15 25\\
-    Zürich, Schweiz\\
-    Schweizer und französischer Staatsbürger\\
-    \href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}
+    \skillgroup{\faCode}{TypeScript, NodeJS, Express,\\Python, C, C\texttt{++}, Java Spring Boot}
+    \skillgroup{\faCloud}{Google Cloud Platform (GCP)}
+    \skillgroup{\faDatabase}{Firebase, MongoDB}
+    \skillgroup{\faSitemap}{Microservices, Payment Systems,\\Third-party APIs, Redis}
+    \skillgroup{\faRocket}{Performance-Optimierung,\\Komplexe Algorithmen}
+    \skillgroup{\faTools}{Linux, git, Cursor}
   }
 
   \vspace{0.7cm}
@@ -155,4 +151,3 @@
 \end{minipage}
 
 \end{document}
-

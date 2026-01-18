@@ -118,3 +118,14 @@
   }%
 }
 
+% Skill group: icon + content in aligned minipages
+% Usage: \skillgroup{icon}{content}
+\newcommand{\skillgroup}[2]{%
+  \begin{minipage}[t]{1.5em}
+    #1
+  \end{minipage}%
+  \begin{minipage}[t]{\dimexpr\linewidth-1.5em-0.3em\relax}
+    #2
+  \end{minipage}\\[3pt]
+}
+
