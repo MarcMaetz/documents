@@ -29,7 +29,7 @@
 % Column widths: define in terms of textwidth (for minipages)
 \newcommand{\colgap}{0.04\textwidth}
 \newlength{\leftcolwidth}
-\setlength{\leftcolwidth}{0.65\textwidth}
+\setlength{\leftcolwidth}{0.68\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
 % Sidebar width: convert textwidth-based right column to paperwidth coords for overlay
 % The sidebar starts from page right edge and should cover: right column + half gap + margin
@@ -118,9 +118,9 @@
   }%
 }
 
-% Skill group: icon + content in aligned minipages
-% Usage: \skillgroup{icon}{content}
-\newcommand{\skillgroup}[2]{%
+% Icon item: icon + content in aligned minipages
+% Usage: \iconitem{icon}{content}
+\newcommand{\iconitem}[2]{%
   \begin{minipage}[t]{1.5em}
     #1
   \end{minipage}%
