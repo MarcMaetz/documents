@@ -20,7 +20,7 @@
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
-\definecolor{boxyellow}{HTML}{FFF176}
+\definecolor{boxcolor}{HTML}{2B8F7A}
 
 % Shared size for the profile image box
 \newcommand{\imageboxsize}{3.5cm}
@@ -28,7 +28,7 @@
 % Column widths: define in terms of textwidth (for minipages)
 \newcommand{\colgap}{0.04\textwidth}
 \newlength{\leftcolwidth}
-\setlength{\leftcolwidth}{0.60\textwidth}
+\setlength{\leftcolwidth}{0.65\textwidth}
 \newcommand{\rightcolwidth}{\dimexpr\textwidth-\leftcolwidth-\colgap\relax}
 % Sidebar width: convert textwidth-based right column to paperwidth coords for overlay
 % The sidebar starts from page right edge and should cover: right column + half gap + margin
@@ -60,13 +60,13 @@
   \ifnum#1=2 $\bigstar$ $\bigstar$ $\scalebox{1.2}{$\star$}$\fi
 }
 
-% Title box: yellow border, no fill, black text, full column width
+% Title box: navy blue fill, white text, full column width
 \newcommand{\boxedtitle}[1]{%
   \tikz[baseline=(t.base)]{
     \node[
-      draw=boxyellow,
-      fill=white,   % was: fill=none
-      text=black,
+      draw=boxcolor,
+      fill=boxcolor,
+      text=white,
       line width=2pt,
       inner xsep=6pt,
       inner ysep=4pt,
