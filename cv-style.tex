@@ -1,10 +1,10 @@
 % Shared LaTeX setup and styling for CV documents
 
 % Shared page margin
-\newcommand{\pagemargin}{1.8cm}
-\newcommand{\topmargin}{1.2cm}
+\newcommand{\pagemargin}{1.2cm}
+\newcommand{\topmarginone}{0.5cm}
 
-\usepackage[top=\topmargin, bottom=\pagemargin, left=\pagemargin, right=\pagemargin]{geometry}
+\usepackage[top=\topmarginone, bottom=\pagemargin, left=\pagemargin, right=\pagemargin]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{shadows}
 \usepackage[hidelinks]{hyperref}
@@ -16,14 +16,14 @@
 
 
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=8pt, itemsep=1pt, topsep=1pt, labelsep=3pt, label=\raisebox{0.25ex}{\scalebox{0.7}{\textbullet}}}
+\setlist[itemize]{leftmargin=8pt, itemsep=2pt, topsep=1pt, labelsep=3pt, label=\raisebox{0.25ex}{\scalebox{0.7}{\textbullet}}}
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
 \definecolor{boxyellow}{HTML}{FFF176}
 
 % Shared size for the profile image box
-\newcommand{\imageboxsize}{4.2cm}
+\newcommand{\imageboxsize}{3.5cm}
 
 % Column widths: define in terms of textwidth (for minipages)
 \newcommand{\colgap}{0.04\textwidth}
