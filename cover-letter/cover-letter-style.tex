@@ -1,0 +1,21 @@
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\pagenumbering{gobble}
+\setlength{\headheight}{14pt}
+
+\newcommand{\contactline}{%
+  {\fontsize{10}{12}\selectfont
+  Marc Maetz \textbar{} Langfurren 32 \textbar{} 8057 Zürich \textbar{} marc.maetz@proton.me \textbar{} +41 77 434 15 25}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\contactline}
+\fancyfoot[C]{\contactline}
