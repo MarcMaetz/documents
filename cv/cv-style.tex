@@ -1,10 +1,12 @@
 % Shared LaTeX setup and styling for CV documents
 
-% Shared page margin
-\newcommand{\pagemargin}{1.2cm}
-\newcommand{\topmarginone}{0.5cm}
+% Shared page margins
+\newcommand{\leftmarginone}{0.9cm}
+\newcommand{\rightmarginone}{1.0cm}
+\newcommand{\bottommarginone}{0.5cm}
+\newcommand{\topmarginone}{0.2cm}
 
-\usepackage[top=\topmarginone, bottom=\pagemargin, left=\pagemargin, right=\pagemargin]{geometry}
+\usepackage[top=\topmarginone, bottom=\bottommarginone, left=\leftmarginone, right=\rightmarginone]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{shadows}
 \usepackage[hidelinks]{hyperref}
@@ -17,7 +19,7 @@
 
 
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=8pt, itemsep=2pt, topsep=1pt, labelsep=3pt, label=\raisebox{0.25ex}{\scalebox{0.7}{\textbullet}}}
+\setlist[itemize]{leftmargin=8pt, itemsep=1pt, topsep=0pt, labelsep=3pt, label=\raisebox{0.25ex}{\scalebox{0.7}{\textbullet}}}
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{textgray}{gray}{0.25}
@@ -37,7 +39,7 @@
 \newlength{\colgapabs}
 \setlength{\rightcolwidthabs}{\rightcolwidth}
 \setlength{\colgapabs}{\colgap}
-\newcommand{\sidebarwidth}{\dimexpr\rightcolwidthabs+\colgapabs/6+\pagemargin\relax}
+\newcommand{\sidebarwidth}{\dimexpr\rightcolwidthabs+\colgapabs/6+\rightmarginone\relax}
 
 % Reusable drop shadow style
 \tikzset{
@@ -70,7 +72,7 @@
       text=white,
       line width=2pt,
       inner xsep=6pt,
-      inner ysep=4pt,
+      inner ysep=3pt,
       rounded corners=2pt,
       text width=\linewidth,
       align=left,
@@ -88,7 +90,7 @@
       text=textgray,
       line width=1pt,
       inner xsep=6pt,
-      inner ysep=6pt,
+      inner ysep=4pt,
       rounded corners=2pt,
       text width=\linewidth,
       align=left,
@@ -126,6 +128,6 @@
   \end{minipage}%
   \begin{minipage}[t]{\dimexpr\linewidth-1.5em-0.3em\relax}
     #2
-  \end{minipage}\\[3pt]
+  \end{minipage}\\[2pt]
 }
 
