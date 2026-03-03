@@ -1,0 +1,163 @@
+\documentclass[a4paper,11pt]{article}
+\input{../cv-style}
+
+\begin{document}
+
+% --- Right sidebar background with TikZ (only decoration) ---
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[accent!8]
+    (current page.north east)
+    rectangle ++(-\sidebarwidth,-\paperheight);
+\end{tikzpicture}
+
+% --- Header (normal LaTeX) ---
+\noindent
+\begin{minipage}[t]{\leftcolwidth}
+  \begin{minipage}[t][\imageboxsize][c]{\dimexpr0.55\leftcolwidth\relax}
+    \raggedright
+    {\LARGE\bfseries Marc Maetz}\\[2pt]
+    {\Large Research Software Engineer}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{\dimexpr0.42\leftcolwidth\relax}
+    \vspace{0pt}
+    \centering
+    \boxedimage{%
+      \includegraphics[width=\imageboxsize,height=\imageboxsize]{Marc.jpg}
+    }
+  \end{minipage}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{\rightcolwidth}
+  \vspace{0pt}
+  \raggedright
+  \boxedtitle{Contact}\\[2pt]
+  \boxedcontent{%
+    \iconitem{\faEnvelope}{\href{mailto:marc.maetz@proton.me}{marc.maetz@proton.me}}
+    \iconitem{\faPhone}{+41 77 434 15 25}
+    \iconitem{\faMapMarker}{Zurich, Switzerland}
+    \iconitem{\faPassport}{Swiss and French citizen}
+    \iconitem{\faLinkedin}{\href{https://linkedin.com/in/marc-maetz}{linkedin.com/in/marc-maetz}}
+  }
+\end{minipage}
+
+\vspace{0.3cm}
+
+% --- Two-column layout with minipages ---
+\noindent
+\begin{minipage}[t]{\leftcolwidth}
+  \raggedright
+
+  \boxedtitle{Experience}\\[2pt]
+  \boxedcontent{%
+    \textbf{Software Engineer (TypeScript, Python, GCP)} -- \href{https://www.perk.com}{Yokoy/Perk} -- Finance\\[2pt]
+    {\small\textcolor{textgray}{\textit{2022-05/now, Zurich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Scaled a high-volume payment flow by 100x through query optimization, caching strategy, and throughput-focused system design
+      \item Built reliable integrations and asynchronous processing with robust error handling, monitoring, and alerting
+      \item Drove production reliability improvements through automated tests, observability, and incident-response tooling
+      \item Led cross-functional delivery on complex systems with strong correctness and availability requirements
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{Software Engineer (C)} -- \href{https://www.autoform.com}{AutoForm} -- Mechanical Engineering\\[3pt]
+    {\small\textcolor{textgray}{\textit{2018-05/2022-05, Zurich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Developed performance-critical C code for finite-element simulation workflows in sheet metal forming
+      \item Optimized numerical algorithms for memory efficiency and runtime in compute-intensive pipelines
+      \item Contributed to numerical plausibility and robustness checks for trustworthy simulation outcomes
+      \item Collaborated closely with domain experts to transfer research-grade methods into production software
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{Software Developer (Java)} -- \href{https://www.unitek.ch}{Unitek Engineering} -- Finance\\[2pt]
+    {\small\textcolor{textgray}{\textit{2017-09/2018-03, Zurich (CH)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Implemented and integrated backend components and data adapters for market data services
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedcontent{%
+    \textbf{R\&D Intern (MATLAB)} -- \href{https://www.kier.re.kr}{KIER} -- Energy / Solar Research\\[2pt]
+    {\small\textcolor{textgray}{\textit{2014-09/2014-10, Daejeon (KR)}}}\\[2pt]
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item Supported simulation and analysis tasks for solar concentrator research
+    \end{itemize}
+  }
+
+  \vspace{0.3cm}
+
+  \boxedtitle{Selected Scientific Projects}\\[2pt]
+  \boxedcontent{%
+    \begin{itemize}[leftmargin=*, itemsep=2pt]
+      \item \textbf{MSc thesis (Python):} implemented a finite-volume numerical scheme for the induction equation in ideal magnetohydrodynamics
+      \item \textbf{Semester project (CUDA):} parallel implementation of simulated quantum annealing (Ising model, path integral Monte Carlo)
+      \item \textbf{HPC training:} coursework and projects covering vectorization, OpenMP, MPI, and hybrid parallelization
+    \end{itemize}
+  }
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{\rightcolwidth}
+  \raggedright
+
+  \boxedtitle{Skills}\\[2pt]
+  \boxedcontent{%
+    \iconitem{\faCode}{Python, C, C\texttt{++}, CUDA, TypeScript, Java, MATLAB, Bash}
+    \iconitem{\faRocket}{Scientific computing, numerical methods, performance profiling and optimization (CPU/GPU)}
+    \iconitem{\faSitemap}{Parallel and distributed computing fundamentals: OpenMP, MPI, asynchronous processing}
+    \iconitem{\faCloud}{Google Cloud Platform (GCP)}
+    \iconitem{\faDatabase}{Firebase, MongoDB}
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Languages}\\[2pt]
+  \boxedcontent{%
+    German (native)\\
+    French (native)\\
+    English (C1)
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Education}\\[2pt]
+  \boxedcontent{%
+    \textbf{ETH Zurich}\\
+    \textbf{Master of Science}\\
+    Computational Science and \\Engineering
+  } \\ \vspace{0.1cm}
+
+    \boxedcontent{%
+    \textbf{ETH Zurich}\\
+    \textbf{Bachelor of Science}\\
+    Physics
+  }
+  \\
+  \vspace{0.1cm}
+    \boxedcontent{%
+    \textbf{KTH Stockholm}\\
+    Exchange semester
+  }
+
+  \vspace{0.7cm}
+
+  \boxedtitle{Beyond work}\\[2pt]
+  \boxedcontent{%
+    Amateur theater\\
+    Cycling\\
+    Gym\\
+    Climbing, hiking, mountaineering
+  }
+
+\end{minipage}
+
+\end{document}
